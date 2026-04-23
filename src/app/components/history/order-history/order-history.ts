@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { HistoryService } from '../../services/history.service';
-import { Order } from '../../models/inventory.model';
+import { HistoryService } from '../../../services/history.service';
+import { Order } from '../../../models/inventory.model';
 
 @Component({
   selector: 'app-order-history',

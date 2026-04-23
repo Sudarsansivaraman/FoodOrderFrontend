@@ -7,7 +7,7 @@ import { Cart, AddToCartDto, UpdateCartDto } from '../models/cart.model';
   providedIn: 'root'
 })
 export class CartService {
-  private apiUrl = '/api/cart';
+  private apiUrl = 'https://localhost:7174/api/cart';
 
   constructor(private http: HttpClient) {}
 

@@ -6,7 +6,7 @@ import { Item } from '../models/item.model';
 
 @Injectable({ providedIn: 'root' })
 export class MenuService {
-  private readonly base = 'http://localhost:5000/api';
+  private readonly base = 'https://localhost:7174/api';
 
   constructor(private http: HttpClient) {}
 

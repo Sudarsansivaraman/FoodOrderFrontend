@@ -7,7 +7,7 @@ import { StockItem, Order } from '../models/inventory.model';
   providedIn: 'root'
 })
 export class HistoryService {
-  private apiUrl = 'http://localhost:5000/api';
+  private apiUrl = 'https://localhost:7174/api';
 
   constructor(private http: HttpClient) {}
 

@@ -8,7 +8,7 @@ export interface CategoryPayload { name: string; description: string; }
 
 @Injectable({ providedIn: 'root' })
 export class AdminService {
-  private readonly base = 'http://localhost:5000/api/admin';
+  private readonly base = 'https://localhost:7174/api/admin';
 
   constructor(private http: HttpClient) {}
 
