@@ -1,0 +1,23 @@
+<div class="checkout-container">
+  <div class="card checkout-card">
+    <h2>Checkout</h2>
+    
+    <div *ngIf="!success">
+      <p class="summary-text">You are about to place an order with the items in your cart.</p>
+      
+      <div *ngIf="error" class="error-alert">
+        {{ error }}
+      </div>
+      
+      <button class="btn-primary btn-large" [disabled]="loading" (click)="placeOrder()">
+        {{ loading ? 'Processing...' : 'Confirm Order' }}
+      </button>
+    </div>
+
+    <div *ngIf="success" class="success-alert">
+      <h3>🎉 Order Placed Successfully!</h3>
+      <p>Your order ID is <strong>#{{ orderId }}</strong>.</p>
+      <button class="btn-secondary mt-3" (click)="viewOrderHistory()">View Order History</button>
+    </div>
+  </div>
+</div>
