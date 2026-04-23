@@ -1,22 +1,12 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet, RouterLink } from '@angular/router';
-import { AuthService } from './services/auth.service';
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
-// Root component — navigation bar + router outlet
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  constructor(public authService: AuthService) {}
-
-  // Logout and redirect to login
-  logout(): void {
-    this.authService.logout();
-    window.location.href = '/login';
-  }
+  protected readonly title = signal('Food_Ordering');
 }
