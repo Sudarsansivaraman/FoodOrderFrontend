@@ -52,7 +52,7 @@ export class OrderDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/history']);
+    this.router.navigate(['/orders']);
   }
 
   getStatusColor(status: string): string {

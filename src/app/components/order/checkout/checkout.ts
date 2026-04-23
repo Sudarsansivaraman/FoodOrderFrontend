@@ -39,6 +39,6 @@ export class CheckoutComponent {
   }
 
   viewOrderHistory(): void {
-    this.router.navigate(['/history']);
+    this.router.navigate(['/orders']);
   }
 }

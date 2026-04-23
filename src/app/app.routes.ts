@@ -13,19 +13,19 @@ import { ItemFormComponent } from './components/admin/item-form/item-form';
 import { authGuard, adminGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'menu', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'menu', component: MenuListComponent },
-  { path: 'menu/:id', component: MenuDetailComponent },
+  { path: 'menu/:itemId', component: MenuDetailComponent },
   { path: 'cart', component: CartComponent, canActivate: [authGuard] },
   { path: 'checkout', component: CheckoutComponent, canActivate: [authGuard] },
   { path: 'orders', component: OrderHistoryComponent, canActivate: [authGuard] },
   { path: 'orders/:id', component: OrderDetailComponent, canActivate: [authGuard] },
   { path: 'admin', component: AdminDashboardComponent, canActivate: [adminGuard] },
   { path: 'admin/category/new', component: CategoryFormComponent, canActivate: [adminGuard] },
-  { path: 'admin/category/:id', component: CategoryFormComponent, canActivate: [adminGuard] },
+  { path: 'admin/category/:categoryId', component: CategoryFormComponent, canActivate: [adminGuard] },
   { path: 'admin/item/new', component: ItemFormComponent, canActivate: [adminGuard] },
-  { path: 'admin/item/:id', component: ItemFormComponent, canActivate: [adminGuard] },
+  { path: 'admin/item/:itemId', component: ItemFormComponent, canActivate: [adminGuard] },
   { path: '**', redirectTo: 'menu' },
 ];

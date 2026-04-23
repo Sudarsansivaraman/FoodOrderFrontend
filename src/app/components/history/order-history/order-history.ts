@@ -43,7 +43,7 @@ export class OrderHistoryComponent implements OnInit {
   }
 
   viewOrderDetail(orderId: number): void {
-    this.router.navigate(['/history/detail', orderId]);
+    this.router.navigate(['/orders', orderId]);
   }
 
   getStatusColor(status: string): string {
